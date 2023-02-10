@@ -1,38 +1,1173 @@
-.App {
-  text-align: center;
+@font-face {
+  font-family: "Proxima Nova Rg";
+  src: url('./font/fnt.ttf');
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+  /* border: 1px solid black; */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body {
+  padding: 0;
+  font-family: "Proxima Nova Rg";
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.navbar {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  position: fixed;
+  top: 0;
+  z-index: 5;
+  width: 50%;
+  padding-right: 100%;
+  background-color: white;
+  border-bottom: 1px solid rgb(223, 217, 217);
+  margin-bottom: 0px;
+}
+
+#name {
+  background-color: black;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+#nav-name {
+  font-size: 18px;
+  font-weight: 800;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.navbar-decoration {
+  text-decoration: none;
+  color: black;
+  padding: 17px 5%;
+}
+
+.navbar-decoration>div {
+  font-size: 10px;
+  font-weight: 700;
+}
+
+#home,
+.edit {
+  padding: 0 5%;
+}
+
+#home:hover {
+  background-color: rgb(210, 210, 210);
+  background-image: url('images/white.jpg');
+  background-size: 40% 100%;
+  background-repeat: no-repeat;
+  padding-right: px;
+  transition: ease-in-out;
+}
+
+.edit:hover {
+  background-color: rgb(210, 210, 210);
+  background-image: url('images/white.jpg');
+  background-size: 40% 100%;
+  background-repeat: no-repeat;
+  padding-right: px;
+}
+
+.page {
+  margin-top: 58px;
+}
+
+#go-to-projects {
+  cursor: pointer;
+}
+
+.section-1 {
+  display: flex;
+  padding-bottom: 100px;
+  border-bottom: 2px solid rgb(231, 231, 231);
+  margin-top: 55px;
+}
+
+.home {
+  width: 50%;
+}
+
+.description {
+  padding-left: 21%;
+  padding-top: 80px;
+}
+
+.intro-name {
+  display: flex;
+  line-height: 0;
+  width: fit-content;
+  height: 50%;
+  padding-right: 5%;
+  padding-left: 2%;
+  background-color: rgb(210, 210, 210);
+  background-image: url('images/white.jpg');
+  background-size: 100% 50%;
+  background-repeat: no-repeat;
+}
+
+#i {
+  font-weight: 400;
+  padding-right: 2%;
+}
+
+#space {
+  padding-right: 2%;
+}
+
+.about {
+  margin-right: 20%;
+}
+
+.about-header {
+  font-weight: 600;
+  font-size: 16px
+}
+
+.about-body {
+  font-size: 17px;
+  font-weight: 300;
+  line-height: 30px;
+  color: grey;
+  margin-bottom: 130px;
+}
+
+.pfp {
+  max-height: 700px;
+  margin-left: 12%;
+}
+
+.small-box {
+  width: 2px;
+  height: 2px;
+  background-color: rgb(168, 168, 168);
+  margin: 2px;
+}
+
+.boxx {
+  position: relative;
+  display: flex;
+}
+
+.boxes {
+  display: flex;
+  flex-wrap: wrap;
+  height: 25px;
+  width: 58px;
+  padding: 2px;
+  margin-top: 50px;
+  position: absolute;
+}
+
+.nonee {
+  display: none;
+}
+
+#b2 {
+  width: 200px;
+  z-index: 2;
+  transform: translate(-30%, 500px);
+}
+
+#b3 {
+  position: absolute;
+  transform: translate(800%, 200px);
+  z-index: -1;
+}
+
+.talk {
+  border: 1px solid rgb(212, 208, 208);
+  height: fit-content;
+  font-size: 12px;
+  padding: 20px 55px;
+  z-index: 2;
+  position: absolute;
+  transform: translate(200%, 550px);
+  background-color: white;
+  letter-spacing: 1px;
+  border-radius: 3px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.github {
+  border: 1px solid rgb(212, 208, 208);
+  height: fit-content;
+  font-size: 12px;
+  padding: 20px 55px;
+  background-color: white;
+  letter-spacing: 1px;
+  border-radius: 3px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+a {
+  color: black;
+}
+
+.mail {
+  height: 12px;
+  margin: 3px 5px 0px 0px;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+}
+
+.icons {
+  z-index: 1;
+  padding: 20px 1%;
+  position: absolute;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.social-media-icon {
+  height: 15px;
+}
+
+.line {
+  height: 200px;
+  width: 0.5px;
+  position: absolute;
+  background-color: rgb(225, 221, 221);
+  right: 50%;
+  top: 220px;
+}
+
+.section-2 {
+  margin: 100px 12% 0px 12%;
+}
+
+#latest-works {
+  color: grey;
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+
+.caseStudies {
+  font-size: 35px;
+  font-weight: 800;
+}
+
+.head {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+
+.all-case-studies {
+  border: 1px solid rgb(212, 208, 208);
+  background-color: white;
+  color: grey;
+  font-size: 13px;
+  height: fit-content;
+  padding: 15px 35px;
+}
+
+.project1 {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 100px;
+}
+
+.project1-image {
+  position: relative;
+  display: flex;
+}
+
+.zindex {
+  z-index: -1;
+}
+
+.box1-projects {
+  transform: translate(-60%, 0px);
+}
+
+.box2-projects {
+  width: 200px;
+  transform: translate(145%, -10px);
+}
+
+.box3-projects {
+  transform: translate(600%, 130px);
+}
+
+#box1-projectsss,
+#box2-projectsss,
+#box3-projectsss {
+  display: none;
+}
+
+.image-for-project {
+  height: 400px;
+  max-width: 260px;
+}
+
+#image2 {
+  z-index: 2;
+  position: absolute;
+  /* transform: rotate(-90deg); */
+  left: 50%;
+  top: 85px;
+  height: 250px;
+}
+
+.project1-description {
+  width: 40%;
+}
+
+.project-id {
+  font-size: 40px;
+  color: grey;
+}
+
+.project-name {
+  font-size: 20px;
+  font-weight: 700;
+  width: fit-content;
+  padding-right: 1%;
+  background-color: rgb(234, 228, 228);
+  background-image: url('images/white.jpg');
+  background-size: 110% 55%;
+  background-repeat: no-repeat;
+  border: none;
+}
+
+.project-details {
+  font-size: 12px;
+  color: grey;
+  line-height: 20px;
+  margin-top: 30px;
+  margin-bottom: 40px;
+}
+
+.project-button {
+  border: 1px solid rgb(212, 208, 208);
+  background-color: white;
+  color: grey;
+  font-size: 13px;
+  height: fit-content;
+  padding: 15px 40px;
+  cursor: pointer;
+}
+
+.languages {
+  background-color: #b7b7b7;
+  text-align: center;
+  color: white;
+  font-size: 12px;
+  padding: 70px 0px;
+}
+
+.language-header {
+  font-size: 30px;
+  font-weight: 700;
+  margin: 10px 0px;
+}
+
+.language-description {
+  width: 40%;
+  margin: 0 auto;
+  padding-bottom: 10px;
+}
+
+.stack {
+  /* border: 1px solid; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.stack-images {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10%;
+  padding: 0px 5% 60px 5%;
+}
+
+.stack-image {
+  height: 80px;
+  margin: 40px 0px 10px 0px;
+  /* border: 1px solid; */
+}
+
+.work-together {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 80px 0px;
+}
+
+.have-a-project {
+  font-size: 12px;
+  color: rgb(166, 163, 163);
+  font-weight: 400;
+}
+
+.work-together-header {
+  font-size: 40px;
+  font-weight: 700;
+}
+
+.work-together-description {
+  font-size: 12px;
+  width: 50%;
+  text-align: center;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  color: grey;
+}
+
+.talk-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-envelope {
+  background-color: white;
+  padding: 22px 65px;
+  margin-top: 50px;
+  border: 1px solid rgb(232, 227, 227);
+  font-size: 12px;
+  text-decoration: none;
+}
+
+#footer-box {
+  z-index: -1;
+  width: 50px;
+  height: fit-content;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 5%;
+  border-top: 1px solid rgb(212, 211, 211);
+}
+
+.copyright {
+  font-size: 12px;
+  color: grey;
+
+}
+
+.iconss {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.circle {
+  border-radius: 60%;
+  border: 1px solid;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 7rem;
+  cursor: pointer;
+}
+
+.arrow {
+  border-top: 1px solid;
+  border-left: 1px solid;
+  transform: rotate(45deg);
+  height: 5px;
+  width: 5px;
+}
+
+@media (max-width: 1350px) {
+  .image-for-project {
+    height: 300px;
   }
-  to {
-    transform: rotate(360deg);
+
+  #image2 {
+    height: 200px;
+    top: 50px;
+  }
+
+  .box2-projects {
+    display: none;
+  }
+
+  .box3-projects {
+    transform: translate(500%, 80px);
+  }
+}
+
+@media (max-width: 1200px) {
+  .head-name {
+    font-size: 13px;
+  }
+
+  .about-header {
+    font-size: 13px;
+  }
+
+  .about-body {
+    font-size: 12px;
+    line-height: 20px;
+    margin-bottom: 50px;
+  }
+
+  .pfp {
+    max-height: 500px;
+  }
+
+  .talk {
+    font-size: 10px;
+    padding: 11px 30px;
+  }
+
+  .github {
+    padding: 14px 35px;
+  }
+
+  .mail {
+    height: 10px;
+  }
+
+  #b2 {
+    z-index: 10;
+    transform: translate(-20%, 400px);
+    margin-top: 0px;
+  }
+
+  #b3 {
+    transform: translate(550%, 100px);
+  }
+
+  .talk {
+    transform: translate(220%, 410px);
+  }
+
+  #latest-works {
+    font-size: 10px;
+  }
+
+  .all-case-studies {
+    font-size: 11px;
+    padding: 10px 25px;
+  }
+
+  .caseStudies {
+    font-size: 22px;
+  }
+
+  .image-for-project {
+    height: 250px;
+  }
+
+  #image2 {
+    height: 150px;
+    top: 50px;
+  }
+
+  #none {
+    display: none;
+  }
+
+  .project-id {
+    font-size: 30px;
+  }
+
+  .project-name {
+    font-size: 16px;
+  }
+
+  .project-details {
+    font-size: 11px;
+    margin-top: 10px;
+  }
+
+  .section-2 {
+    margin-top: 50px;
+  }
+
+  .project-button {
+    font-size: 10px;
+    padding: 10px 25px;
+  }
+}
+
+@media (max-width: 914px) {
+  .navbar-decoration>div {
+    font-size: 8px;
+    white-space: nowrap;
+  }
+
+  #home,
+  .edit {
+    padding: 0px 4%;
+  }
+
+  .talk {
+    padding: 10px 15px;
+  }
+
+  .github {
+    padding: 10px 15px;
+    transform: translate(0px, 0px);
+    font-size: 10px;
+  }
+
+  .pfp {
+    margin-left: 0px;
+  }
+
+  .icons {
+    margin: 0px 2%;
+    position: relative;
+    right: auto;
+  }
+
+  .line {
+    position: relative;
+    top: auto;
+    right: auto;
+    margin: 0 auto;
+  }
+
+  .about-body {
+    margin-bottom: 0px;
+    padding-bottom: 30px;
+  }
+
+  #b1 {
+    transform: translate(-60%, 0px);
+  }
+
+  #b3 {
+    transform: translate(480%, 100px);
+  }
+
+  .flex {
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+  }
+}
+
+@media (max-width: 830px) {
+  .talk {
+    position: relative;
+    transform: translate(0px, 0px);
+    white-space: nowrap;
+    text-align: center;
+  }
+
+  .boxx {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .section-1 {
+    padding-bottom: 50px;
+  }
+
+  .github {
+    display: none;
+  }
+
+  .head-name,
+  .about-header {
+    font-size: 11px;
+  }
+
+  .about-body {
+    font-size: 10px;
+    line-height: 15px;
+  }
+
+  .description {
+    padding-top: 40px;
+    padding-left: 15%;
+  }
+
+  .section-2 {
+    margin: 50px 9% 0px 9%;
+  }
+
+  .pfp {
+    height: 400px;
+  }
+
+  #b2 {
+    display: none;
+  }
+
+  #b3 {
+    transform: translate(380%, 100px);
+  }
+
+  #b1 {
+    z-index: -1;
+  }
+
+  .image-for-project {
+    height: 200px;
+  }
+
+  #image2 {
+    height: 120px;
+    top: 40px;
+  }
+
+}
+
+@media (max-width: 650px) {
+
+  .head-name {
+    font-size: 9px;
+  }
+
+  .about-header {
+    font-size: 8px;
+  }
+
+  .about-body {
+    font-size: 8px;
+    line-height: 12px;
+  }
+
+  .navbar-decoration {
+    padding: 12px 5%;
+  }
+
+  .edit {
+    padding: 0px 5%;
+  }
+
+  .section-1 {
+    margin-top: 30px;
+    padding-bottom: 40px;
+  }
+
+  .social-media-icon {
+    height: 7px;
+  }
+
+  .icons {
+    gap: 3px;
+  }
+
+  .line {
+    height: 90px;
+  }
+
+  .pfp {
+    height: 300px;
+  }
+
+  #b1 {
+    transform: translate(-50%, -20px);
+  }
+
+  #b3 {
+    transform: translate(270%, 30px);
+  }
+
+  .project-id {
+    font-size: 13px;
+    padding-bottom: 10px;
+  }
+
+  .project-name {
+    font-size: 11px;
+  }
+
+  .project-details {
+    font-size: 9px;
+    line-height: 14px;
+    margin-bottom: 20px
+  }
+
+  .project-button {
+    padding: 5px 15px;
+    font-size: 8px;
+  }
+
+  .image-for-project {
+    height: 180px;
+  }
+
+  #image2 {
+    height: 100px;
+  }
+
+  .languages {
+    font-size: 10px;
+    padding: 40px 0px;
+  }
+
+  .language-header {
+    font-size: 20px;
+    margin: 6px 0px;
+  }
+
+  .language-description {
+    font-size: 9px;
+  }
+
+  .stack-image {
+    height: 50px;
+  }
+
+  .stack-images {
+    padding: 0px 6% 30px 6%;
+  }
+
+  .work-together {
+    padding: 40px 0px;
+    gap: 10px;
+  }
+
+  .have-a-project {
+    font-size: 10px;
+  }
+
+  .work-together-header {
+    font-size: 25px;
+  }
+
+  .work-together-description {
+    font-size: 9px;
+    line-height: 13px;
+  }
+
+  .footer-envelope {
+    padding: 12px 40px;
+    margin-top: 30px;
+  }
+
+  .show {
+    display: none;
+  }
+
+  .nonee {
+    display: block;
+  }
+
+  .footer {
+    padding: 10px 3%;
+  }
+
+  .copyright {
+    font-size: 8px;
+  }
+
+  .circle {
+    margin-left: 3rem;
+    width: 15px;
+    height: 15px;
+  }
+
+  .navbar-decoration {
+    height: 100%;
+  }
+
+  #home {
+    margin: 17px 5%;
+  }
+}
+
+@media (max-width: 560px) {
+  .caseStudies {
+    font-size: 14px;
+  }
+
+  #latest-works {
+    font-size: 7px;
+  }
+
+  .all-case-studies {
+    font-size: 8px;
+    padding: 7px;
+    margin-right: 18%;
+  }
+
+  .image-for-project {
+    height: 150px;
+    position: absolute;
+    left: 40px;
+  }
+
+  #image2 {
+    left: 0;
+    top: 25px;
+  }
+
+  .section-2 {
+    /* background-color: #e3e2e2; */
+    margin: 0;
+    padding: 40px 9%;
+  }
+
+  .project-name {
+    /* background-image: none; */
+  }
+
+}
+
+@media (max-width: 470px) {
+  .pfp {
+    height: 250px;
+  }
+
+  #b3 {
+    transform: translate(210%, -20px);
+  }
+
+  #b1 {
+    display: none;
+  }
+
+  .pfp {
+    margin-left: 3%;
+    z-index: 1;
+  }
+
+  .image-for-project {
+    top: 20px;
+  }
+
+  #image2 {
+    height: 90px;
+  }
+
+  .talk {
+    padding: 6px 0px;
+    font-size: 8px;
+  }
+
+  .icons {
+    margin-right: 1%;
+  }
+
+  .project1 {
+    margin-bottom: 90px;
+  }
+
+  .project-details {
+    font-size: 8px;
+    line-height: 10px;
+    margin-bottom: 10px;
+  }
+
+  .project-button {
+    padding: 3px 5px;
+    font-size: 6px;
+  }
+
+  .language-header {
+    font-size: 8px;
+  }
+  .language-description {
+    font-size: 5px;
+    width: 60%;
+  }
+  .stack-image {
+    height: 20px;
+    margin-top: 25px;
+  }
+  .stack-images {
+    padding-bottom: 20px;
+  }
+  .work-together {
+    padding: 20px 0px;
+    gap: 7px;
+  }
+  .have-a-project {
+    font-size: 7px;
+  }
+  .work-together-header {
+    font-size: 11px;
+  }
+  .work-together-description {
+    font-size: 6px;
+    line-height: 8px;
+  }
+  .footer-envelope {
+    font-size: 6px;
+    padding: 4px 13px;
+    margin-top: 15px;
+  }
+  .mailf {
+    height: 5px;
+  }
+}
+
+@media (max-width: 400px) {
+  .navbar-decoration>div {
+    font-size: 5px;
+  }
+  #nav-name {
+    font-size: 7px;
+    padding: 0px 8px;
+  }
+  .navbar-decoration {
+    padding: 10px 3%;
+    margin: 0px;
+  }
+  #home {
+    margin: 0px;
+  }
+  .head-name {
+    font-size: 5px;
+  }
+
+  .head {
+    margin-bottom: 20px;
+  }
+
+  .about-header {
+    font-size: 7px;
+  }
+
+  .about-body {
+    font-size: 5px;
+    line-height: 8px;
+  }
+
+  .image-for-project {
+    display: none;
+  }
+
+  .stack-image {
+    height: 30px;
+  }
+
+  .languages {
+    font-size: 7px;
+  }
+
+  .language-header {
+    font-size: 13px;
+  }
+
+  .language-description {
+    font-size: 6px;
+    padding-bottom: 0;
+  }
+  .section-1 {
+    margin-top: 13px;
+    border-bottom: 1px solid rgb(231, 231, 231);
+  }
+  .pfp {
+    height: 200px;
+  }
+  #b3 {
+    display: none;
+  }
+  .talk {
+    padding: 4px 0px;
+    font-size: 6px;
+    margin-left: 4%;
+  }
+  .mail {
+    margin-top: 0px;
+    height: 6px;
+  }
+  #image2 {
+    height: 70px;
+  }
+  .section-2 {
+    padding: 20px;
+  }
+
+  #latest-works {
+    font-size: 5px;
+  }
+  .caseStudies {
+    font-size: 10px;
+  }
+  .all-case-studies {
+    font-size: 5px;
+    padding: 4px;
+    margin-right: 0px;
+  }
+  .project1 {
+    margin-bottom: 50px;
+  }
+  .project-name {
+    font-size: 6px;
+    background-size: 110% 65%;
+  }
+  .project-id {
+    font-size: 7px;
+    padding-bottom: 5px;
+  }
+  .project-details {
+    font-size: 5px;
+    line-height: 8px;
+    margin-bottom: 5px;
+  }
+  .project-button {
+    font-size: 5px;
+    padding: 2px;
+  }
+  .languages {
+    padding: 20px 0px;
+    font-size: 5px;
+  }
+  .language-header {
+    font-size: 8px;
+  }
+  .language-description {
+    font-size: 5px;
+  }
+  .stack-image {
+    height: 20px;
+    margin-top: 25px;
+  }
+  .stack-images {
+    padding-bottom: 20px;
+  }
+  .work-together {
+    padding: 20px 0px;
+    gap: 7px;
+  }
+  .have-a-project {
+    font-size: 5px;
+  }
+  .work-together-header {
+    font-size: 10px;
+  }
+  .work-together-description {
+    font-size: 5px;
+    line-height: 8px;
+  }
+  .footer-envelope {
+    font-size: 6px;
+    padding: 4px 13px;
+    margin-top: 15px;
+  }
+  .copyright {
+    font-size: 5px;
+  }
+  .iconss {
+    gap: 7px;
+  }
+  .footer {
+    padding: 4px 3%;
+  }
+  .circle {
+    height: 8px;
+    width: 8px;
+  }
+  .arrow {
+    height: 2px;
+    width: 2px;
   }
 }
