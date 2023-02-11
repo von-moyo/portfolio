@@ -17,10 +17,19 @@ export default function Navbar() {
   }
 
   const projectSection = useRef(null)
+  const aboutSection = useRef(null)
+
 
   const scrollToProjects = () => {
     window.scrollTo({
       top: projectSection.current.offsetTop,
+      behavior: 'smooth'
+    })
+  }
+
+  const scrollToAbout = () => {
+    window.scrollTo({
+      top: aboutSection.current.offsetTop,
       behavior: 'smooth'
     })
   }
@@ -49,8 +58,10 @@ export default function Navbar() {
               onClick={scrollToProjects}
             >PROJECTS</div>
           </div>
-          <Link className='navbar-decoration' id='home' to='/about'>
-            <div>ABOUT ME</div>
+          <Link className='navbar-decoration' id='home' to='/'>
+            <div
+              onClick={scrollToAbout}
+            >ABOUT ME</div>
           </Link>
           <div className='navbar-decoration edit' onClick={goToContactMe} id='go-to-projects'>
             <div>CONTACT ME</div>
@@ -61,6 +72,7 @@ export default function Navbar() {
             exact path='/'
             element={<Home
               toProjects={projectSection}
+              toAbout={aboutSection}
             />} />
           <Route
             exact path='/projects'

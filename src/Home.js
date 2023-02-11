@@ -29,6 +29,7 @@ export default function Home(props) {
         box1={box1}
         box2={box2}
         box3={box3}
+        about={props.toAbout}
       />
       <CaseStudies
         key={array[1]}

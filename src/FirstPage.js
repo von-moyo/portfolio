@@ -7,7 +7,7 @@ export default function firstPage(props) {
   const descriptionHeader = "A Web Developer specializing in Front-End Design and Implementation."
 
   return (
-    <div className='section-1'>
+    <div className='section-1' ref={props.about}>
 
       <div className='home'>
         <div className='description'>
