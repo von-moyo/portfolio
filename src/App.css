@@ -302,14 +302,15 @@ a {
 }
 
 .image-for-project {
+  box-shadow: 0px 20px 24px -1px rgba(16, 24, 40, 0.08);
   height: 400px;
   max-width: 260px;
 }
 
 #image2 {
+  box-shadow: 0px 20px 24px -1px rgba(16, 24, 40, 0.08);
   z-index: 2;
   position: absolute;
-  /* transform: rotate(-90deg); */
   left: 50%;
   top: 85px;
   height: 250px;
@@ -374,26 +375,53 @@ a {
   padding-bottom: 10px;
 }
 
-.stack {
-  /* border: 1px solid; */
+.item {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-.stack-images {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 10%;
-  padding: 0px 5% 60px 5%;
+.marquee .item {
+  padding: 0 20px;
 }
 
-.stack-image {
+.wrapper {
+  position: relative; /* Changed to relative */
+  display: flex;
+  width: 100%; /* Ensure the wrapper takes full width */
+  overflow: hidden; /* Hide overflow to prevent items from exceeding borders */
+}
+
+@keyframes swipe {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.grid {
+  display: flex;
+  animation: swipe var(--speed) linear infinite backwards;
+}
+
+.marqqq section.grid {
+  grid-gap: 0px;
+}
+.marquee section.grid {
+  grid-gap: 0px;
+}
+
+.floww {
+  width: 100%;
+  overflow: hidden;
+}
+
+.item-image {
   height: 80px;
   margin: 40px 0px 10px 0px;
-  /* border: 1px solid; */
 }
 
 .work-together {
@@ -831,7 +859,7 @@ a {
     font-size: 9px;
   }
 
-  .stack-image {
+  .item-image {
     height: 50px;
   }
 
@@ -1008,8 +1036,8 @@ a {
     font-size: 5px;
     width: 60%;
   }
-  .stack-image {
-    height: 20px;
+  .item-image {
+    height: 30px;
     margin-top: 25px;
   }
   .stack-images {
@@ -1078,9 +1106,6 @@ a {
     display: none;
   }
 
-  .stack-image {
-    height: 30px;
-  }
 
   .languages {
     font-size: 7px;
