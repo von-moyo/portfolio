@@ -3,10 +3,10 @@
   src: url('./font/fnt.ttf');
 }
 
-* {
+/* * { */
   /* border: 1px solid black; */
   
-}
+/* } */
 
 body {
   padding: 0;
@@ -950,9 +950,9 @@ a {
     padding: 40px 9%;
   }
 
-  .project-name {
-    /* background-image: none; */
-  }
+  /* .project-name {
+    background-image: none;
+  } */
 
 }
 

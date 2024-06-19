@@ -9,7 +9,6 @@ export default function Project(props) {
   const box1 = [];
   const box2 = [];
   const box3 = [];
-  for (let i = 0; i < number; i++) {
     box1.push(box);
     box2.push(box);
     box3.push(box);
