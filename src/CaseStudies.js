@@ -1,4 +1,4 @@
-import React, { useRef } from 'react'
+import React from 'react'
 // import { useTheme } from 'styled-components'
 import ProjectDetails from './projectDetails'
 import Project from './Project'

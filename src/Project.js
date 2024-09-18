@@ -50,7 +50,7 @@ export default function Project(props) {
 
           <section></section>
 
-          <img alt='for project01' className='image-for-project' src={props.proj.image} />
+          <img alt='for project01' className='image-for-project' src={props.proj.image}/>
           <img alt='for project01' className='image-for-proj' id='image2' src={props.proj.image2} />
         </div>
         <div className='boxes zindex box1-projects' id='none'> {id % 2 === 1 ? box1 : ""} </div>
