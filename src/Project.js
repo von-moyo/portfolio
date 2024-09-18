@@ -12,7 +12,7 @@ export default function Project(props) {
     box1.push(box);
     box2.push(box);
     box3.push(box);
-  }
+  
   const boxxx = <span className='small-box'></span>
   const numberrr = 100;
   const boxxx1 = [];
