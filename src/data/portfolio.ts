@@ -10,7 +10,7 @@ export const profile = {
   phone: "+234 807 549 6460",
   resumeUrl:
     "https://docs.google.com/document/d/120xAtbyS99Ov2oZ2MOB2I9zRhBblUnfpJNgkpBfdQRU/edit?usp=sharing",
-  avatar: "/photoroom.png",
+  avatar: "/profile.jpeg",
 };
 
 export const socials = [
