@@ -1,70 +1,50 @@
-# Getting Started with Create React App
+# Florish Adekogbe — Portfolio
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A modern, animated personal portfolio for a Frontend Engineer.
 
-## Available Scripts
+## Tech stack
 
-In the project directory, you can run:
+- **Vite** — build tool & dev server
+- **React 18 + TypeScript** — UI
+- **Tailwind CSS v4** — styling (theme tokens defined in `src/index.css`)
+- **Framer Motion** — scroll reveals, staggered entrances, counters & micro-interactions
+- **lucide-react** — icons
 
-### `npm start`
+## Getting started
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+```bash
+yarn install     # install dependencies
+yarn dev         # start the dev server (http://localhost:5173)
+yarn build       # type-check + production build to /dist
+yarn preview     # preview the production build locally
+```
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Project structure
 
-### `npm test`
+```
+index.html                 # Vite entry HTML (Google Fonts loaded here)
+src/
+  main.tsx                 # React root
+  App.tsx                  # composes all sections
+  index.css                # Tailwind import + design tokens (@theme) + helpers
+  data/portfolio.ts        # ALL site content (edit this to update copy)
+  components/
+    Background.tsx         # ambient gradient blobs + cursor spotlight
+    ScrollProgress.tsx     # top gradient progress bar
+    Navbar.tsx             # sticky nav, scroll-spy, mobile menu
+    Hero.tsx               # headline, avatar, animated stat counters
+    Projects.tsx           # selected work cards
+    Experience.tsx         # animated career timeline
+    About.tsx              # bio, education, certifications
+    Skills.tsx             # infinite marquee + grouped skills
+    Contact.tsx            # CTA + copy-email
+    Footer.tsx
+    Reveal.tsx / Counter.tsx / SectionHeading.tsx  # reusable primitives
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Customizing
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- **Content** lives entirely in [`src/data/portfolio.ts`](src/data/portfolio.ts) — update experience, projects, skills, links, etc. there.
+- **Theme/colours** are CSS variables in the `@theme` block of [`src/index.css`](src/index.css).
+- **Résumé**: the nav/“Résumé” button links to `/Florish-Adekogbe-Resume.pdf`. Drop that PDF into the `public/` folder so the link resolves.
+- **Project links**: add a `url` field to any project in `portfolio.ts` to show its “visit” button (only CompassAI has one wired up so far).
